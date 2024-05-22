@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>BallotChain</title>
+</head>
+<body>
+    <div id="successfulMessages" class="custom-alert alert alert-success" role="alert"></div>
+    <div id="errorMessages" class="custom-alert alert alert-danger" role="alert"></div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card card-body mb-4">
+                    <h1>BallotChain</h1>
+                    <h6>Sistema de votaciones descentralizado</h6>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <h4>Candidatos</h4>
+                    <div id="candidatesList"></div>
+                </div>
+                
+                <form class="card card-body" id="candidateForm">
+                    <h4>Añadir candidatos</h4>
+                    <input type="text" name="candidateName" placeholder="Nombre" class="form-control my-3" autofocus>
+                    <input type="text" name="candidateDetails" placeholder="Identificación del candidato" class="form-control my-3" autofocus>
+                    <button class="btn btn-primary">Añadir</button>
+                </form>
+
+                <div class="card card-body">
+                    <h4>Ganador</h4>
+                    <div id="winnerDisplay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="./libs/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
+    <script src="./dapp.js"></script>
+</body>
+</html>

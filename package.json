@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "@truffle/contract": "^4.6.31",
+        "bootstrap": "^5.3.3"
+    },
+    "name": "tfg_dquintanaco",
+    "version": "0.0.1",
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "keywords": [
+        "ethereum",
+        "blockchain",
+        "smart contracts",
+        "web development"
+    ],
+    "author": "David Quintana Cobaleda",
+    "license": "MIT",
+    "description": "Proyecto de TFG sobre un sistema descentralizado de votaciones basado en Blockchain",
+    "devDependencies": {
+        "lite-server": "^2.6.1"
+    }
+}

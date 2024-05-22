@@ -1,0 +1,116 @@
+/* Estilos básicos para el cuerpo del documento y el elemento html */
+body, html {
+    height: 100%;
+    background: linear-gradient(135deg, #6a3093 0%, #a044ff 50%, #5fa8d3 100%);
+    overflow-x: hidden;
+}
+
+/* Generales: animaciones para transiciones y efectos visuales */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} /* Utilizado para efectos de entrada suave de elementos */
+
+@keyframes buttonClickAnimation {
+    0% { transform: scale(1.05); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+} /* Efecto de pulsación para botones */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} /* Animación para deslizar elementos desde la izquierda al cargar */
+
+/* Estilos para fondos oscuros y elementos con efecto de blur */
+.bg-dark {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+} /* Fondo oscuro con filtro de desenfoque para sobresaltar el contenido */
+
+/* Estilos para botones primarios y sus estados interactivos */
+.btn-primary {
+    background: linear-gradient(to right, #fc466b 0%, #3f5efb 100%);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s linear;
+    animation: buttonClickAnimation 0.4s ease forwards;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(252, 70, 107, 0.4);
+    background: linear-gradient(to right, #3f5efb 0%, #fc466b 100%);
+} /* Invierte gradiente y aumenta sombra al pasar el mouse */
+
+/* Estilos para tarjetas de contenido con animaciones y hover */
+.card {
+    background-color: #4A2870;
+    color: white;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 22px rgba(74, 40, 112, 0.5);
+    background-color: #4c2a78;
+} /* Elevación y cambio de color al pasar el mouse */
+
+/* Estilos para controles de formulario con interactividad */
+.form-control {
+    background-color: #33334D;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ff5e57;
+    box-shadow: 0 0 8px rgba(255, 94, 87, 0.5);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #b0bec5;
+    opacity: 1;
+}
+
+/* Estilos para elementos de entrada y visualización de candidatos */
+.candidate-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.candidate-item input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #ff5e57;
+} /* Personaliza el color del control radio para mantener la consistencia visual */
+
+.custom-alert{
+    float: right;
+    top: 16px;
+    max-width: 60%;
+    right: 16px;
+    display: none;
+}
+
